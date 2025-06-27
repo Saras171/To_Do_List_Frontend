@@ -32,7 +32,7 @@ export default function LoginPage() {
       toast.success("Login successful!"); //  Notify user
 setTimeout(() => {
   router.push("/dashboard");
-  router.refresh();
+ 
 }, 200);
 
       return res;

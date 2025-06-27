@@ -30,7 +30,7 @@ export default function SignupPage() {
       toast.success("Signup successful!"); //  Notify user
 setTimeout(() => {
   router.push("/dashboard");
-  router.refresh();
+ 
 }, 200);
 
       return res;

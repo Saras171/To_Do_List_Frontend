@@ -30,7 +30,11 @@ export default function LoginPage() {
     try {
       const res = await login(email, password);
       toast.success("Login successful!"); //  Notify user
-      router.push("/dashboard");     //  Redirect after login
+setTimeout(() => {
+  router.push("/dashboard");
+  router.refresh();
+}, 200);
+
       return res;
     } catch (err) {
       toast.error(err?.message || "Invalid credentials. Please sign up first.");

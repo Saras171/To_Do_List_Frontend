@@ -28,7 +28,11 @@ export default function SignupPage() {
     try {
       const res = await signup(username, email, password);
       toast.success("Signup successful!"); //  Notify user
-      router.push("/dashboard");  //  Redirect after login
+setTimeout(() => {
+  router.push("/dashboard");
+  router.refresh();
+}, 200);
+
       return res;
     } catch (err) {
       toast.error(err?.message || "Signup failed. Please try again.");

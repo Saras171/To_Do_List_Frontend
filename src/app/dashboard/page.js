@@ -74,13 +74,6 @@ export default function DashboardPage() {
   }, [router, showPortal]);
 
 
-    // === Extra Protection on Page Load ===
-  useEffect(() => {
-    if (user === null) {
-      router.push("/login");
-    }
-  }, [user, router]);
-  
   // === Refetch Todos and Recalculate Status ===
   const refreshTodos = async () => {
     const updated = await getAllTodos();

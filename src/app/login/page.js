@@ -30,12 +30,8 @@ export default function LoginPage() {
     try {
       const res = await login(email, password);
       toast.success("Login successful!"); //  Notify user
-
-  router.push("/dashboard");
- 
-
-
-      return res;
+ router.push("/dashboard");
+  return res;
     } catch (err) {
       toast.error(err?.message || "Invalid credentials. Please sign up first.");
       throw err;  // Optional: For further error handling

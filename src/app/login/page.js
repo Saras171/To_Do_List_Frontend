@@ -30,10 +30,10 @@ export default function LoginPage() {
     try {
       const res = await login(email, password);
       toast.success("Login successful!"); //  Notify user
-setTimeout(() => {
+
   router.push("/dashboard");
  
-}, 200);
+
 
       return res;
     } catch (err) {
